@@ -52,7 +52,7 @@ browser.action.onClicked.addListener(async (tab) => {
         await browser.action.setPopup({ tabId: tab.id, popup: "primegov.html" });
         await browser.action.openPopup();
         }
-      else if (currentTabURL.endsWith("/AgendaCenter")){
+      else if (currentTabURL.endsWith("/AgendaCenter") || currentTabURL.endsWith("/agendacenter")){
         //NOTE: AgendaCenter is more prevalent than some of those that come before it in this list, 
         // but some pages false-flag agendacenter when they're actually embeds from a previous option, 
         // so we should NOT move this up the list.
